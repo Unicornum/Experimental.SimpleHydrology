@@ -160,11 +160,15 @@ struct pool {
   their retrieval functions.
 */
 
+#ifndef EXPERIMENTAL_TILE_SIZE
+#define EXPERIMENTAL_TILE_SIZE 512
+#endif
+
 namespace quad {
 
 const int mapscale = 80;
 
-const int tilesize = 512;
+const int tilesize = EXPERIMENTAL_TILE_SIZE;
 const int tilearea = tilesize*tilesize;
 const ivec2 tileres = ivec2(tilesize);
 

@@ -125,8 +125,9 @@ Vertexpool(int k, int n):Vertexpool(){
 
 ~Vertexpool(){
 
-	for(size_t i = 0; i < indirect.size();)
-		unsection(indirect[i].index);
+	// out_of_range
+	//for(size_t i = 0; i < indirect.size();)
+	//	unsection(indirect[i].index);
 
 	glBindVertexArray(vao);
 	glUnmapBuffer(vbo);
